@@ -12,4 +12,6 @@
     --bg-image: url('../images/cover-image-dark.png');
     --header-min-block-size: 668px;
     --padding: 10px;
+    --section-gap: 50px;
+    --main-block-margin-start: 40px;
 }
