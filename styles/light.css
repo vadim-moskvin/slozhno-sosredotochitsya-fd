@@ -20,7 +20,7 @@
     color: var(--text-color);
 }
 
-:root.theme-light .header-decor {
+:root.theme-light .rec {
     display: none;
 }
 
@@ -41,7 +41,7 @@
         --bg-image: url('../images/cover-image-light.png');
     }
 
-    .header-decor {
+    .rec {
         display: none;
     }
 

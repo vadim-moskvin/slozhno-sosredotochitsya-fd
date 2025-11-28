@@ -39,11 +39,11 @@ button {
 .header {
     position: relative;
     display: grid;
-    margin-right: var(--padding);
-    margin-left: var(--padding);
-    padding-top: var(--padding);
-    padding-bottom: var(--padding);
     color: var(--accent-color);
+    margin-inline-start: var(--padding);
+    margin-inline-end: var(--padding);
+    padding-block-start: var(--padding);
+    padding-block-end: var(--padding);
     block-size: 100dvh;
     min-block-size: var(--header-min-block-size);
     grid-template-rows: 1fr min-content 1fr;
@@ -51,25 +51,6 @@ button {
 
 .decorated-zone {
     position: relative;
-}
-
-.header-decor {
-    line-height: 25px;
-    position: absolute;
-    top: var(--padding);
-    right: 28px;
-}
-
-.header-decor:after {
-    position: absolute;
-    top: 8px;
-    right: -20px;
-    width: 9px;
-    height: 9px;
-    content: "";
-    border-radius: 50%;
-    background-color: currentColor;
-    box-shadow: 0 0 5px 3px var(--accent-color);
 }
 
 .decorated-zone:before {
@@ -92,6 +73,25 @@ button {
     content: '';
     border-width: 0 0 1px 1px;
     border-style: solid;
+}
+
+.rec {
+    line-height: 25px;
+    position: absolute;
+    top: var(--padding);
+    right: 28px;
+}
+
+.rec:after {
+    position: absolute;
+    top: 8px;
+    right: -20px;
+    width: 9px;
+    height: 9px;
+    content: "";
+    border-radius: 50%;
+    background-color: currentColor;
+    box-shadow: 0 0 5px 3px var(--accent-color);
 }
 
 .header__theme-menu {
@@ -141,7 +141,7 @@ button {
     text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-.header-text {
+.header__text {
     align-self: center;
 }
 
@@ -167,14 +167,14 @@ button {
     gap: 20px;
 }
 
-.section-title {
+.section__title {
     font-size: inherit;
     font-weight: bold;
     color: var(--accent-color);
     background-color: transparent;
 }
 
-.section-content {
+.section__content {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -191,10 +191,6 @@ button {
     font-weight: bold;
 }
 
-.advice-section > .title {
-    margin-block-start: 18px;
-}
-
 .advice-section .card:first-child {
     margin-block-start: 10px;
 }
@@ -203,7 +199,7 @@ button {
     font-weight: normal;
 }
 
-.card-text {
+.card__text {
     margin-block-start: 10px;
 }
 
@@ -228,10 +224,10 @@ button {
     display: grid;
     align-items: center;
     justify-content: center;
-    margin-right: var(--padding);
-    margin-left: var(--padding);
-    padding-top: var(--padding);
-    padding-bottom: var(--padding);
+    margin-inline-end: var(--padding);
+    margin-inline-start: var(--padding);
+    padding-block-start: var(--padding);
+    padding-block-end: var(--padding);
     margin-block-start: 40px;
     block-size: 100dvh;
     min-block-size: var(--header-min-block-size);
@@ -252,15 +248,15 @@ button {
 
     .main-title {
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-        margin-left: calc(var(--padding) * -1);
+        margin-inline-start: calc(var(--padding) * -1);
     }
 
-    .header-text {
+    .header__text {
         width: 50%;
         justify-self: end;
     }
 
-    .section-title {
+    .section__title {
         min-width: 236px;
         max-width: 236px;
     }
@@ -332,18 +328,18 @@ button {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .section-title {
+    .section__title {
         min-width: 315px;
         max-width: 315px;
     }
 
-    .what-section .section-content {
+    .what-section .section__content {
         flex-direction: row;
         justify-content: space-between;
         gap: 20px;
     }
 
-    .what-section .section-content .card {
+    .what-section .section__content .card {
         flex: 1;
     }
 }
