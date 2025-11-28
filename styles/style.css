@@ -1,8 +1,26 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 a {
+    cursor: pointer;
     text-decoration: none;
     text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+a:hover {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: var(--text-color);
+}
+
+a:focus-visible {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--text-color);
+    outline: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 .page {
@@ -25,6 +43,7 @@ a {
     display: grid;
     padding-top: var(--padding);
     padding-bottom: var(--padding);
+    color: var(--accent-color);
     block-size: 100dvh;
     min-block-size: var(--header-min-block-size);
     grid-template-rows: 1fr min-content 1fr;
@@ -39,7 +58,6 @@ a {
     position: absolute;
     top: var(--padding);
     right: 28px;
-    color: var(--accent-color);
 }
 
 .header-decor:after {
@@ -63,7 +81,6 @@ a {
     content: '';
     border-width: 1px 1px 0 0;
     border-style: solid;
-    border-color: var(--accent-color);
 }
 
 .decorated-zone:after {
@@ -75,7 +92,6 @@ a {
     content: '';
     border-width: 0 0 1px 1px;
     border-style: solid;
-    border-color: var(--accent-color);
 }
 
 .header__theme-menu {
@@ -96,7 +112,6 @@ a {
     height: 26px;
     padding: 0 13px 0.2em;
     text-transform: lowercase;
-    color: var(--accent-color);
     border: 1px solid transparent;
     background-color: transparent;
 }
@@ -104,6 +119,16 @@ a {
 .header__theme-menu-button_active {
     pointer-events: none;
     border: 1px solid currentColor;
+}
+
+.header__theme-menu-button:hover {
+    border-color: rgba(var(--accent-color-base) / 0.4);
+}
+
+.header__theme-menu-button:focus-visible {
+    border-width: 0 0 1px 0;
+    border-color: currentColor;
+    outline: none;
 }
 
 .main-title {
